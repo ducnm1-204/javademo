@@ -3,7 +3,7 @@ package org.example;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class testBai4_2 {
+public class test {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap so luong toi da cua mang: ");
@@ -22,15 +22,14 @@ public class testBai4_2 {
     // Nếu là 9, đặt thành 0 và tiếp tục carry
     // Nếu tất cả các chữ số đều là 9, tạo mảng mới
     // Đặt chữ số đầu tiên là 1
-    public static int[] congMot(int[] digits) {
+    public static int[] congMot(int[] digits){
         int n = digits.length;
-        for (int i = n - 1; i >=0; i--) {
+        for (int i = n-1; i >= 0 ; i--) {
             if (digits[i]<9){
                 digits[i]++;
                 return digits;
-            } else {
-                digits[i] = 0;
             }
+            digits[i] = 0;
         }
         int[] newArray = new int[n+1];
         newArray[0] = 1;

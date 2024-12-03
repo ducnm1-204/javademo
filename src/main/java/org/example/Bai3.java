@@ -5,7 +5,7 @@ public class Bai3 {
         String inputString = "Computer programming or coding is the composition of sequences of instructions";
         System.out.println(inputString);
         int demTu = demTu(inputString);
-        System.out.println("So từ trong chuỗi la: "+(demTu+1));
+        System.out.println("So từ trong chuỗi la: "+demTu);
 //        TODO 1: Cat khoang khong o 2 dau
 //        TODO 2: Dem cac khoang cach (Dau cach giua cac tu)
 //        TODO 3: Tu khoang cach + 1 la ra so tu
@@ -16,10 +16,10 @@ public class Bai3 {
         int count = 0;
         for (int i = 0; i < inputString.length(); i++) {
             x = inputString.charAt(i);
-            if (x== ' '){
+            if (x == ' '){
                 count++;
             }
         }
-        return count;
+        return count + 1;
     }
 }

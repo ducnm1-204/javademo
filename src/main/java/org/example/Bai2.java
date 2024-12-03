@@ -32,12 +32,11 @@ public class Bai2 {
     //Tìm trong mảng a vị trí đầu tiên của k
     public static int find(int[] a, int k) {
         int t = a.length;
-        int index = 0;
-        for (int i = t-1; i >= 0 ; i--) {
+        for (int i = 0; i < t ; i++) {
             if (k == a[i]){
-                index = i;
+                return i;
             }
         }
-        return index;
+        return -1;
     }
 }
