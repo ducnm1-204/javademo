@@ -25,37 +25,19 @@ public class Bai2 {
             }
         }
         System.out.println("Mang tang dan: "+Arrays.toString(array));
-//        timK(array);
-        int k = find(array);
-        System.out.println(k);
-    }
-
-
-//    public static void timK(int[] array) {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Nhap vao so nguyen k: ");
-//        int k = sc.nextInt();
-//        for (int i = 0; i < array.length; i++) {
-//            if (k == array[i]) {
-//                System.out.println(i);
-//            }
-//        }
-//    }
-    //Tìm trong mảng a vị trí đầu tiên của k
-    public static int find(int[] a) {
-        int count =0;
-        Scanner sc = new Scanner(System.in);
         System.out.println("Nhap vao so nguyen k: ");
-        int k = sc.nextInt();
-        for (int i = 0; i < a.length; i++) {
+        int TimK = find(array, sc.nextInt());
+        System.out.println(TimK);
+    }
+    //Tìm trong mảng a vị trí đầu tiên của k
+    public static int find(int[] a, int k) {
+        int t = a.length;
+        int index = 0;
+        for (int i = t-1; i >= 0 ; i--) {
             if (k == a[i]){
-                count++;
-                System.out.println(i);
+                index = i;
             }
         }
-        int[] newArray = new int[a.length];
-
-
-        return k;
+        return index;
     }
 }

@@ -8,8 +8,6 @@ public class Bai1 {
         int[] rong = new int[]{1,1,1};
         System.out.print("Mảng ban đầu: ");
         System.out.println(Arrays.toString(array));
-//        int[] xoaPT = remote(array);
-//        System.out.println(Arrays.toString(xoaPT));
         int k = nonDuplicateCount(array);
         System.out.println(k);
         int i = nonDuplicateCount(rong);
@@ -38,56 +36,4 @@ public class Bai1 {
         }
         return count;
     }
-
-
-
-//    public static int[] remote(int[] array) {
-//        int count = 0;
-//        int index = 0;
-//
-//
-//        //Đếm số lượng số nguyên bị trùng
-//        for (int i = 0; i < array.length; i++) {
-//            for (int j = i+1; j < array.length; j++) {
-//                if (array[i]==array[j]){
-//                    count++;
-//                }
-//            }
-//        }
-//        System.out.println("count: "+count);
-//
-//        //Gán số nguyên bị trùng đó vào 1 mảng mới
-//        int[] trungNhau = new int[count];
-//        int soTrung = 0;
-//        for (int i = 0; i < array.length ; i++) {
-//            for (int j = i+1; j < array.length; j++) {
-//                if (array[i]==array[j]){
-//                    trungNhau[soTrung] = i;
-//                    soTrung++;
-//                }
-//            }
-//        }
-//        System.out.println("Số nguyên bị trùng nhau ở vị trí: "+Arrays.toString(trungNhau));
-//
-//        //Tạo 1 mảng mới có kích thước bằng mảng cũ trừ đi mảng bị trùng
-//        int[] newArray = new int[array.length-count];
-//        for (int i = 0; i < array.length; i++) {
-//            for (int j = i+1; j < array.length; j++) {
-//                if (array[i]==array[j]) {
-//                    index++;
-//                }
-//            }
-//        }
-//        System.out.println("newArray: "+Arrays.toString(newArray));
-//
-//        //Gán các phần thử không trùng ở mảng cũ sang mảng mới
-//        for (int i = 0; i < array.length ; i++) {
-//            for (int j = i+1; j < array.length; j++) {
-//                if (array[i]==array[j]){
-//                    newArray[i] = array[i];
-//                }
-//            }
-//        }
-//        return newArray;
-//    }
 }
